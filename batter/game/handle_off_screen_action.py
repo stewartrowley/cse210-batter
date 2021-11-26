@@ -13,14 +13,12 @@ class HandleOffScreenAction(Action):
             dx = ball.get_velocity().get_x()
             dy = ball.get_velocity().get_y()
 
-            if x == 0 or x == 800:
-                dx = dx * -1
+            if x > 780 or x < 0:
+                ball.set_velocity(Point(-dx, dy))
 
-            if y == 0 or y == 600:
-                dy = dy * -1
+            elif y > 580 or y < 0:
+                ball.set_velocity(Point(dx, -dy))
             
-            velocity = Point(dx, dy)
-            ball.set_velocity(velocity)
             # position = ball.get_position()
             # self.x = position.get_x()
             # self.y = position.get_y()

@@ -9,6 +9,7 @@ class Brick(Actor):
         self._description = ''
         self.set_width(constants.BRICK_WIDTH)
         self.set_height(constants.BRICK_HEIGHT)
+
         
 
     # def get_position(self):

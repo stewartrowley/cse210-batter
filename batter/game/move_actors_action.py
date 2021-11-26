@@ -9,7 +9,8 @@ class MoveActorsAction(Action):
     def execute(self, cast):
         for group in cast.values():
             for actor in group:
-                if actor.get_velocity().is_zero():
+                if actor.get_velocity():
+                    self._move_actor(actor)
                     self._move_actor(cast['balls'][0])
         # self._move_actor( cast['balls'][0])
 
